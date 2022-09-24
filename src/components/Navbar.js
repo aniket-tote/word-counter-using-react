@@ -1,23 +1,34 @@
-import React from 'react';
+import { Flex, IconButton, useColorMode } from "@chakra-ui/react";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import React from "react";
 
 export default function Navbar() {
+  const { colorMode, toggleColorMode } = useColorMode();
   let darkmode = false;
-  const toggle = () =>{
-    if(darkmode){
+  const toggle = () => {
+    toggleColorMode();
+    if (darkmode) {
       darkmode = false;
-    }else{
+    } else {
       darkmode = true;
     }
-  }
+  };
 
   return (
-      <ul className="list flex-row items-center justify-between bg-slate-200 text-slate-900 p-4 flex">
-        <li className="item1 cursor-pointer hover:underline text-2xl">Word Counter</li>
-        <div onClick={toggle} className="toggle flex cursor-pointer items-center bg-slate-300 w-[50px] h-[25px] rounded-full relative">
-          <div id='sliderround' className="sliderround h-4/5 w-2/5 rounded-full bg-slate-500 absolute left-1 transition-all ease-in-out duration-500"></div>
-        </div>
-      </ul>
+    <Flex
+      alignItems={"center"}
+      justifyContent={"space-between"}
+      padding={"1rem"}
+      className="list"
+      background={colorMode === "dark" ? "gray.700" : "gray.200"}
+    >
+      <span className="item1 font-bold cursor-pointer hover:underline text-2xl">
+        Word Counter
+      </span>
+      <IconButton
+        onClick={toggle}
+        icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
+      />
+    </Flex>
   );
 }
-
-
