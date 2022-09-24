@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import Textform from './components/Textform';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='flex flex-col'>
+      <Navbar/>
+      <Textform/>
     </div>
   );
 }
 
 export default App;
+
+// def sumNumberDivisible(m,n):
+//     sum = 0
+//     for i in range(m+1,n):
+//         if i%3==0 and i%5==0:
+//             sum+=i
+//     return sum
+
+
+
