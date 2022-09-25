@@ -26,6 +26,7 @@ export default function Navbar() {
         Word Counter
       </span>
       <IconButton
+        borderRadius={"100%"}
         onClick={toggle}
         icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
       />

@@ -50,7 +50,7 @@ export default function Textform() {
     <Flex
       width={"100vw"}
       flexDirection={["column", "column", "row"]}
-      justifyContent={"center"}
+      justifyContent={"space-evenly"}
       experimental_spaceY={["1rem","1rem","0rem"]}
       padding={"4rem"}
       className="home"
@@ -77,12 +77,13 @@ export default function Textform() {
           placeholder="start typing.."
           rows="10"
         />
-        <Flex flexDirection={["column","row"]} padding={["1rem 0rem"]} experimental_spaceY={["1rem","0rem"]} experimental_spaceX={["0rem","1rem"]} alignItems={"center"} className="operations">
+        <Flex flexWrap={"wrap"} alignItems={"center"} className="operations">
           <Button
             boxShadow={"md"}
             border={"2px"}
             borderColor={"gray.500"}
             onClick={douppercase}
+            margin={"1rem 1rem 1rem 0rem"} 
           >
             ABCD
           </Button>
@@ -91,6 +92,7 @@ export default function Textform() {
             border={"2px"}
             borderColor={"gray.500"}
             onClick={dolowercase}
+            margin={"1rem"} 
           >
             abcd
           </Button>
@@ -99,6 +101,7 @@ export default function Textform() {
             border={"2px"}
             borderColor={"gray.500"}
             onClick={dosentencecase}
+            margin={"1rem"} 
           >
             Abcd
           </Button>
@@ -107,6 +110,7 @@ export default function Textform() {
             border={"2px"}
             borderColor={"gray.500"}
             onClick={clear}
+            margin={"1rem"} 
           >
             Clear All
           </Button>
@@ -115,6 +119,7 @@ export default function Textform() {
             border={"2px"}
             borderColor={"gray.500"}
             onClick={copytoclipboard}
+            margin={"1rem"} 
           >
             {copytext}
           </Button>
@@ -126,26 +131,26 @@ export default function Textform() {
           {wordscount * 0.3} seconds read.
         </Text>
       </Flex>
-      <Box width={["91.66%","91.66%","20%"]} experimental_spaceY={"0.75rem"} className="textformright">
-        <Flex width={"100%"} flexDirection={"column"} padding={["2.5rem","2.5rem","1.25rem"]} experimental_spaceY={"1.25rem"} className="details">
+      <Box width={["91.66%","91.66%","20%"]} className="textformright">
+        <Flex width={"100%"} flexDirection={"column"} paddingLeft={["2.5rem","2.5rem","0.5rem"]} paddingRight={["2.5rem","2.5rem","0.5rem"]} paddingBottom={"2rem"} experimental_spaceY={"1.25rem"} className="details">
           <Text className="text-2xl">Details</Text>
-          <Box className="words flex justify-between px-2">
+          <Box borderLeft={"2px"} className="words flex justify-between px-3">
             <Text>Words</Text>
             <Text>{wordscount}</Text>
           </Box>
-          <Box className="Character flex justify-between px-2">
+          <Box borderLeft={"2px"} className="Character flex justify-between px-3">
             <Text>Character</Text>
             <Text>{text.length}</Text>
           </Box>
-          <Box className="lines flex justify-between px-2">
+          <Box borderLeft={"2px"} className="lines flex justify-between px-3">
             <Text>Lines</Text>
             <Text>{linecount}</Text>
           </Box>
-          <Box className="para flex justify-between px-2">
+          <Box borderLeft={"2px"} className="para flex justify-between px-3">
             <Text>Paragraph</Text>
             <Text>{paracount}</Text>
           </Box>
-          <Box className="Read flex justify-between px-2">
+          <Box borderLeft={"2px"} className="Read flex justify-between px-3">
             <Text>Reading Time</Text>
             <Text>{wordscount * 0.3} sec</Text>
           </Box>
