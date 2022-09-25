@@ -83,7 +83,7 @@ export default function Textform() {
             border={"2px"}
             borderColor={"gray.500"}
             onClick={douppercase}
-            margin={"1rem 1rem 1rem 0rem"} 
+            margin={"1rem"} 
           >
             ABCD
           </Button>
