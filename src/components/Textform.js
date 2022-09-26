@@ -46,6 +46,10 @@ export default function Textform() {
       setcopytext("Copy");
     }, 1000);
   };
+
+  const removeextraspace = () => {
+    setText(text.split(/[ ]+/).join(" "));
+  };
   return (
     <Flex
       width={"100vw"}
@@ -83,7 +87,7 @@ export default function Textform() {
             border={"2px"}
             borderColor={"gray.500"}
             onClick={douppercase}
-            margin={"1rem"} 
+            margin={"1rem 1rem 1rem 0rem"} 
           >
             ABCD
           </Button>
@@ -92,7 +96,7 @@ export default function Textform() {
             border={"2px"}
             borderColor={"gray.500"}
             onClick={dolowercase}
-            margin={"1rem"} 
+            margin={"1rem 1rem 1rem 0rem"} 
           >
             abcd
           </Button>
@@ -101,7 +105,7 @@ export default function Textform() {
             border={"2px"}
             borderColor={"gray.500"}
             onClick={dosentencecase}
-            margin={"1rem"} 
+            margin={"1rem 1rem 1rem 0rem"} 
           >
             Abcd
           </Button>
@@ -110,7 +114,7 @@ export default function Textform() {
             border={"2px"}
             borderColor={"gray.500"}
             onClick={clear}
-            margin={"1rem"} 
+            margin={"1rem 1rem 1rem 0rem"} 
           >
             Clear All
           </Button>
@@ -119,16 +123,25 @@ export default function Textform() {
             border={"2px"}
             borderColor={"gray.500"}
             onClick={copytoclipboard}
-            margin={"1rem"} 
+            margin={"1rem 1rem 1rem 0rem"} 
           >
             {copytext}
+          </Button>
+          <Button
+            boxShadow={"md"}
+            border={"2px"}
+            borderColor={"gray.500"}
+            onClick={removeextraspace}
+            margin={"1rem 1rem 1rem 0rem"} 
+          >
+            Remove Extra spaces
           </Button>
         </Flex>
         <Text as={"p"} className="inf">
           Your text has {wordscount} words and {text.length} characters.
         </Text>
         <Text as={"p"} className="readtime">
-          {wordscount * 0.3} seconds read.
+        {(wordscount * 285/60).toFixed(2)} seconds read.
         </Text>
       </Flex>
       <Box width={["91.66%","91.66%","20%"]} className="textformright">
@@ -152,7 +165,7 @@ export default function Textform() {
           </Box>
           <Box borderLeft={"2px"} className="Read flex justify-between px-3">
             <Text>Reading Time</Text>
-            <Text>{wordscount * 0.3} sec</Text>
+            <Text>{(wordscount * 285/60).toFixed(2)} sec</Text>
           </Box>
         </Flex>
         <div className="w-full h-[1px] bg-slate-500"></div>
