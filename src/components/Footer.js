@@ -1,7 +1,8 @@
 import React from "react";
 import { SiTailwindcss } from "react-icons/si";
+import { DiReact } from "react-icons/di";
 import { AiFillHeart, AiOutlineCopyrightCircle } from "react-icons/ai";
-import { Flex, Image, useColorMode } from "@chakra-ui/react";
+import { Flex, useColorMode } from "@chakra-ui/react";
 
 export default function Footer() {
   const { colorMode } = useColorMode();
@@ -18,13 +19,7 @@ export default function Footer() {
     >
       <Flex alignItems={"center"}>
         Designed By Aniket in{" "}
-        <Image
-          src="https://reactjs.org/favicon.ico"
-          alt="reactlogo"
-          height={"1rem"}
-          width={"1.rem"}
-          margin={"0px 0.25rem"}
-        />{" "}
+        <DiReact color="#61DAFB" className="mx-1"/>{" "}
         and <SiTailwindcss className="mx-1 text-[#38bdf8]" /> with{" "}
         <AiFillHeart className="text-red-600 mx-1" />
       </Flex>
