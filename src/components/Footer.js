@@ -18,9 +18,9 @@ export default function Footer() {
       backgroundColor={colorMode === "dark" ? "gray.700" : "gray.200"}
     >
       <Flex alignItems={"center"}>
-        Designed By Aniket in{" "}
-        <DiReact color="#61DAFB" className="mx-1"/>{" "}
-        and <SiTailwindcss className="mx-1 text-[#38bdf8]" /> with{" "}
+        Designed By <a href="https://github.com/aniket-tote" className="mx-1 hover:underline">Aniket</a> in
+        <DiReact color="#61DAFB" className="mx-1"/>
+        and <SiTailwindcss className="mx-1 text-[#38bdf8]" /> with
         <AiFillHeart className="text-red-600 mx-1" />
       </Flex>
       <Flex alignItems={"center"}>
