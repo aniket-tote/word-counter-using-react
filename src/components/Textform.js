@@ -44,7 +44,7 @@ export default function Textform() {
     setcopytext("Copied");
     setInterval(() => {
       setcopytext("Copy");
-    }, 1000);
+    }, 3000);
   };
 
   const removeextraspace = () => {
@@ -169,7 +169,7 @@ export default function Textform() {
           </Box>
         </Flex>
         <div className="w-full h-[1px] bg-slate-500"></div>
-        <Flex width={"100%"} flexDirection={"column"} padding={["2.5rem","2.5rem","1.25rem"]} experimental_spaceY={"0.75rem"} className="replacecontainer">
+        <Flex width={"100%"} flexDirection={"column"} padding={["2.5rem","2.5rem","1.25rem"]} className="replacecontainer space-y-5 ">
           <Text className="text-2xl">Find and Replace</Text>
           <Flex width={"100%"} flexDirection={"column"} className="replace w-full flex flex-col space-y-1">
             <Text>Current</Text>
