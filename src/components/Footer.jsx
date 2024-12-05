@@ -1,6 +1,8 @@
 import React from "react";
 import { AiOutlineCopyrightCircle } from "react-icons/ai";
 import { Flex, useColorMode } from "@chakra-ui/react";
+import { CgMail } from "react-icons/cg";
+
 
 export default function Footer() {
   const { colorMode } = useColorMode();
@@ -16,6 +18,7 @@ export default function Footer() {
     >
       <Flex alignItems={"center"}>
         Designed By <a href="https://github.com/aniket-tote" className="mx-1 hover:underline">@aniket-tote</a> 
+        <a href="mailto:connect.anikettote@gmail.com" className="mx-1 hover:underline"><CgMail /></a> 
         {/* in
         <DiReact color="#61DAFB" className="mx-1"/>
         and <SiTailwindcss className="mx-1 text-[#38bdf8]" /> with
